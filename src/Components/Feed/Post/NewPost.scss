@@ -1,0 +1,33 @@
+@import "../../../Styles/Variables.scss";
+
+.newPost {
+  padding-bottom: 10px;
+  border-bottom: 8px solid $primary-background;
+  padding-right: 10px;
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  .postInput {
+    padding: 20px;
+    display: flex;
+    input {
+      flex: 1;
+      margin-left: 20px;
+      font-size: 20px;
+      border: none;
+    }
+  }
+  .postButton {
+    background-color: $primary-color;
+    border: none;
+    color: #fff !important;
+    font-weight: 900;
+    text-transform: inherit;
+    border-radius: 30px;
+    width: 80px;
+    height: 40px;
+    margin-top: 20px;
+    margin-left: auto;
+  }
+}

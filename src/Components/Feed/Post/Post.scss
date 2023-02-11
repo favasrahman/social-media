@@ -1,0 +1,45 @@
+@import "../../../Styles/Variables.scss";
+
+.post {
+  display: flex;
+  align-items: flex-start;
+  border-bottom: 1px solid $primary-background;
+  padding-bottom: 10px;
+  .postAvatar {
+    padding: 20px;
+  }
+  .postBody {
+    flex: 1;
+    padding: 10px;
+    .postHeader {
+      .postHeaderText {
+        h3 {
+          font-size: 15px;
+          margin-bottom: 5px;
+        }
+        .verifiedBadge {
+          font-size: 14px;
+          color: $primary-color;
+        }
+        .postHeaderSpecial {
+          font-weight: 600;
+          font-size: 12px;
+          color: grey;
+          margin-left: 5px;
+        }
+      }
+      .postHeadDesription {
+        margin-bottom: 10px;
+        font-size: 15px;
+      }
+    }
+    img {
+      border-radius: 20px;
+    }
+  }
+  .postFooter {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+}

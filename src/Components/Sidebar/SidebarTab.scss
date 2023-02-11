@@ -1,0 +1,26 @@
+@import '../../Styles/Variables.scss';
+
+.sidebarTab {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  .icon {
+    padding: 20px;
+  }
+  h2 {
+    font-weight: 800;
+    font-size: 20px;
+    margin-right: 20px;
+  }
+}
+
+.sidebarTab:hover {
+  background-color: #e8f5fe;
+  border-radius: 30px;
+  color: $primary-color;
+  transition: color 100ms ease-out;
+}
+
+.sidebarTab--active {
+    color: $primary-color;
+}
