@@ -3,16 +3,14 @@ import { Avatar } from 'antd';
 import React from 'react';
 import './Post.scss';
 
-function Post({
+const Post = ({
   displayName,
   username,
   verified,
-  timestamp,
   text,
-  image,
-  avatar 
-}) {
-  return (
+  avatar
+ }) => {
+ return (
     <div className='post'>
         <div className='postAvatar'>
           <Avatar src={avatar} />
@@ -31,18 +29,15 @@ function Post({
               <p>{text}</p>
             </div>
           </div>
-          <img src={image} alt='' />
           <div className='postFooter'>
           <MessageOutlined className='icon'/>
           <RetweetOutlined className='icon'/>
           <HeartOutlined className='icon'/>
           <ShareAltOutlined className='icon'/>
-
-
           </div>
         </div>
     </div>
   )
-}
+};
 
 export default Post;

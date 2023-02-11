@@ -4,11 +4,12 @@ import NewPost from "./Post/NewPost";
 import Post from "./Post/Post";
 import db from "../../Firebase";
 
+
 function Feed() {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    db.collection("posts").onSnapshot((snapshot) =>
+    db.collection("posts").orderBy('posted', 'desc').onSnapshot((snapshot) =>
       setPosts(snapshot.docs.map((doc) => doc.data()))
     );
   }, []);
@@ -30,9 +31,9 @@ function Feed() {
           verified={post.verified}
           text={post.text}
           avatar={post.avatar}
-          image={post.image}
         />
       ))}
+    
     </div>
   );
 }
