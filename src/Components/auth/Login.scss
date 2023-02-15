@@ -1,0 +1,19 @@
+.layout {
+  background: #fff;
+  .card {
+    width: 40vh;
+    background-color: #fafafa;
+    padding: 20px;
+    .formItem {
+        margin-bottom: 30px;
+    }
+    .googleBtn:hover {
+        color: #DB4437;
+        border-color: #DB4437;
+    }
+    .link {
+        margin-left: 5px;
+        text-decoration: underline;
+    }
+  }
+}

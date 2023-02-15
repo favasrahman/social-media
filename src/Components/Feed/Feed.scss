@@ -1,10 +1,10 @@
 @import "../../Styles/Variables.scss";
 
 .feed {
-  flex: 0.4;
-  border-right: 1px solid $primary-background;
+  // flex: 0.4;
+  // border-right: 1px solid $primary-background;
   // min-width: fit-content;
-  min-width: 70vh;
+  // min-width: 70vh;
   overflow-y: scroll;
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -15,6 +15,14 @@
     z-index: 100;
     border: 1px solid $primary-background;
     padding: 15px 20px;
+  }
+  .post {
+    --webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+  }
+  .post:hover {
+    background-color: rgba(0, 0, 0, 0.03);
+    cursor: pointer;
   }
 }
 

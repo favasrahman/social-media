@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import "./Feed.scss";
-import NewPost from "./Post/NewPost";
-import Post from "./Post/Post";
-import db from "../../Firebase";
+import NewPost from "./post/NewPost";
+import Post from "./post/Post";
+import db from "../../lib/Firebase";
+import { Layout, Row } from "antd";
+import { Content } from "antd/es/layout/layout";
 
 
 function Feed() {
@@ -15,6 +17,14 @@ function Feed() {
   }, []);
 
   return (
+    <Layout>
+      <Content>
+      <Row
+          type="flex"
+          justify="center"
+          align="middle"
+          style={{ height: "100vh" }}
+        >
     <div className="feed">
       {/* Header */}
       <div className="feedHeader">
@@ -25,7 +35,7 @@ function Feed() {
       <NewPost />
 
       {posts.map((post) => (
-        <Post
+        <Post className='post'
           displayName={post.displayName}
           username={post.username}
           verified={post.verified}
@@ -35,6 +45,9 @@ function Feed() {
       ))}
     
     </div>
+    </Row>
+    </Content>
+    </Layout>
   );
 }
 

@@ -1,7 +1,7 @@
 import { UserOutlined } from "@ant-design/icons";
 import { Avatar, Button } from "antd";
 import React, { useState } from "react";
-import db from "../../../Firebase";
+import db from "../../../lib/Firebase";
 import "./NewPost.scss";
 
 function NewPost() {

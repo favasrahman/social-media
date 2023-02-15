@@ -1,25 +1,20 @@
 import './App.scss';
-import Feed from './Components/Feed/Feed';
-import Sidebar from './Components/Sidebar/Sidebar';
-import Trending from './Components/Trending/Trending';
+// import Feed from './components/feed/Feed';
+// import Sidebar from './components/sidebar/Sidebar';
+// import Trending from './components/trending/Trending';
+// import { router } from 'lib/routes';
+import { RouterProvider } from 'react-router-dom';
+import { router } from 'lib/Routes';
 
 function App() {
   return (
     <div className='app'>
-      
-      {/* Sidebar */}
-      <Sidebar/>
-
-
-
-      {/* {Feed} */}
+      {/* <Sidebar/>
       <Feed />
-
-
-
-      {/* Trending */}
-      <Trending />
+      <Trending /> */}
+      <RouterProvider router={router}/>
     </div>
+    
   );
 }
 
